@@ -1,0 +1,200 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F9F5F6;
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem ;
+    margin: 1rem ;
+    border: 1px solid  #FDCEDF;
+    border-radius: 12px;
+    background-color: #F8E8EE;
+}
+
+.brand-name{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* navbar toggle */
+
+.navbar-toggle{
+    position: absolute;
+    right:2rem;
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 20px;
+    height: 20px;
+}
+
+.navbar-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #100c0e;
+}
+
+/* navbar item section */
+.navbar-items ul{
+    display: flex;
+}
+.navbar-items li{
+    list-style: none;
+    width: 100%;
+}
+
+.navbar-items a {
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    position: relative;
+}
+
+.navbar-items a::after{
+    content: "";
+    position: absolute;
+    transform: scaleX(0);
+    background-color: aliceblue;
+    width:100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom left;
+    transition: transform 0.5s ease-out;
+}
+
+.navbar-items a:hover::after{
+    transform: scaleX(1);
+    transition: transform 0.5s ease-out;
+}
+
+/* navbar search section */
+
+.navbar-search{
+    display: flex;
+    height: 35px;
+    /* remember */
+    background-color: white;
+    /* remember */
+    border-radius: 12px;
+}
+.navbar-search input{
+    padding: .25rem;
+    border-radius: 12px;
+    /* remember */
+    width: 100%;
+    height: 100%;
+    /* remember */
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+.navbar-search button{
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    /* remember */
+    transition: all 0.5s;
+}
+
+.navbar-search button span {
+    cursor: pointer;
+    /* the span box will not move */
+    display: inline-block;
+    /* to get the span::after we need the relative position here */
+    position: relative;
+    /* smoother movement */
+    transition: .5s;
+}
+
+.navbar-search button span::after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+
+.navbar-search button:hover span {
+    /* make the movement of span*/
+    padding-right: 12px;
+    color: #c33155;
+  }
+  
+
+.navbar-search button:hover::after,
+.navbar-search button span:hover::after{
+    opacity: 1;
+    /* make the arrow appear */
+    right: 0;
+}
+
+@media (max-width:900px) {
+   
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-toggle{
+        display: flex;
+    }
+
+    .navbar-items{
+        display: none;
+        /* remember */
+        width: 100%;
+    }
+
+    .navbar-items ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-items li {
+        flex-direction: column;
+    }
+
+    .navbar-items a {
+        text-align: center;
+    }
+
+    
+    .navbar-search{
+        position: relative;
+        display: none;
+        margin: 0 auto;
+        width: 100%;
+        border-radius: 12px;
+    }
+    .navbar-search input{
+        width: 70%;
+    }
+
+    .navbar-search button{
+        position: absolute;
+        top: 5px;
+        right: 3rem;
+        width: 10rem;
+        height: 1.6rem;
+        border-radius: 12px;
+    }
+
+    .navbar-items.active,
+    .navbar-search.active{
+        display: flex;
+    }
+}
