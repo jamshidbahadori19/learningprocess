@@ -1,0 +1,157 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+}
+
+section{
+    position: relative;
+    height: 450px;
+    display: flex;
+    align-items: center;
+}
+
+/* swiper */
+.swiper{
+    width:950px
+}
+
+.swiper-pagination{
+    position: absolute;
+}
+
+.swiper-pagination-bullet{
+    height: 7px;
+    width: 26px;
+    border-radius: 25px;
+    background-color: #7d2ae8;
+}
+
+/* end  */
+section .card .image{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    padding: 3px;
+    background-color: #7d2ae8;
+}
+/* make good border so give padding(same size) to the parent with background 
+and give the border(same size) to the child */
+section .card .image img{ 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.card{
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 20px 0;
+    /* changed from 200 to 230 */
+    /* width: 230px; */
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    background-color: #7d2ae8;
+    border-radius: 30px 30px 0 0 ;
+}
+/* make everything in the center */
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    /* with position and z-index we can make the card::before goes to the back of the image */
+    position: relative;
+    z-index: 100;
+}
+
+.card .media-icons{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.card .media-icons i {
+    margin-top: 10px;
+    opacity: .6;
+    color: white;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.card .media-icons i:hover{
+    opacity: 1;
+}
+
+.card .name-profession{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    color: #333;
+}
+
+.name-profession .name{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.name-profession .profession{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.card .rating i{
+    color: #7d2ae8;
+    margin: 0 2px;
+    font-size: 18px;
+}
+
+.card .button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card .button button{
+    background-color: #7d2ae8;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all .3s ease;
+}
+
+.button button:hover{
+    background-color: #6615d0;
+    cursor: pointer;
+}
