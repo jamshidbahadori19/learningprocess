@@ -1,0 +1,184 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-image: url("../3-card/images/2-autumn.jpg");
+    background-size: cover;
+    /* if the screen is so big so the picture is not going to show another picture */
+    background-attachment: fixed;
+}
+
+.container{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.formWrapper{
+    display: flex;
+    width: 80%;
+    height: 500px;
+    background-color: yellowgreen;
+    margin-top: 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px black;
+}
+
+.formDiv{
+    width: 50%;
+    padding: 8px;
+    background:linear-gradient(90deg, #E9E9E9 0%, #CCCCCC 35%, #B4B4B4 100%);
+    text-align: center;
+    border-radius: 10px 0 0 0;
+    border-right: transparent;
+}
+
+.formDiv h2{
+    margin-top: -5px;
+    color:green
+}
+
+.welcomeDiv{
+    width: 50%;
+    padding: 10px;
+    background-image: url("../3-card/images/4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: rgb(17, 0, 0);
+}
+
+.socialBtn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.socialBtn .icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: lavender;
+    margin: 4px;
+    /* line heigh will make the height of the icons to be in the center it should be the same as height */
+    line-height: 30px;
+    box-shadow: 0 0 10px black;
+}
+
+.text{
+    font-size: small;
+}
+
+/* make the or to be on top of the line */
+
+.orDiv{
+    width: 10%;
+    margin: 0 auto;
+    background-color: lavender;
+    position: relative;
+    top: -16px;
+    justify-content: center;
+}
+
+.formGroup{
+    position: relative;
+    width: 100%;
+}
+
+.formGroup input{
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 5px;
+    padding-left: 30px;
+}
+
+
+.formGroup i{
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    color: grey;
+    font-size: smaller;
+}
+
+input::placeholder {
+    position: relative;
+    left: 20px;
+}
+
+.checkBox{
+    width: 100%;
+    margin-top: 2px;
+}
+
+.btn{
+    width: 70%;
+    padding: 15px;
+    background-color: green;
+    margin-top: 15px;
+    color: lavender;
+    border-radius: 20px;
+    border-style: none;
+}
+
+.btn2{
+    width: 70%;
+    padding: 15px;
+    background-color: transparent;
+    margin-top: 15px;
+    color: lavender;
+    border-radius: 20px;
+    border-style: none;
+    border: 1px solid black;
+}
+
+.btn:hover,.btn2:hover, .icon:hover{
+    background-color: brown;
+}
+
+.icon, button {
+    cursor: pointer;
+}
+
+/* responsiveness  */
+
+
+@media (max-width:2000px) {
+    .formGroup input{
+        width: 88%;
+    }
+
+}
+
+@media (max-width:1000px) {
+    .formDiv{
+        width: 70%;
+    }
+
+}
+
+@media (max-width:880px) {
+    .formDiv{
+        width:100%;
+        border-radius: 10px;
+    }
+    .welcomeDiv{
+        display: none;
+    }
+}
+
+@media (max-width:690px) {
+    .formGroup input{
+        width: 85%;
+    }
+}
+
+@media (max-width:460px) {
+    .formGroup input{
+        width: 80%;
+    }
+}
