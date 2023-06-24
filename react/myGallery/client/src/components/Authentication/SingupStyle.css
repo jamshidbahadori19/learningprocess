@@ -1,0 +1,164 @@
+@import 'react-notifications/lib/notifications.css';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    cursor: default;
+}
+    
+.signup-form{
+    width: 90%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.signup-form .image-container{
+    width: 60%;
+    height: 90%;
+    border: 1px solid rgb(143, 197, 241);
+}
+.image-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img:hover{
+    transition: 1s;
+    transform: scale(.9);
+}
+
+.content-wrapper{
+    width: 40%;
+    height: 90%;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(143, 197, 241);
+}
+
+
+.form-content{
+    width: 90%;
+    height: 95%;
+    border: 1px solid rgb(203, 228, 249);
+    border-radius: 30px;
+    background-color: rgb(173, 209, 237) ;
+}
+
+.form-content:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.form-content .profile-image{
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 3px;
+    background-color: aliceblue;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.form-content .profile-image img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+
+.form-details{
+    position: relative;
+    width: 90%;
+    margin-left: 10px;
+    display: grid;
+    gap: .3rem;
+}
+
+.form-details input{
+    padding-left: 30px;
+}
+
+.form-details i {
+    left: 10px;
+}
+
+.form-details .email{
+    position: absolute;
+    top: 32px;
+
+}
+
+.form-details .username{
+    position: absolute;
+    top: 93px;
+}
+
+.form-details .password{
+    position: absolute;
+    top: 155px;
+}
+
+
+.form-details input{
+    width: 100%;
+    height: auto;
+    height: 2rem;
+    border: transparent;
+    background-color: aliceblue;
+    outline: none;
+}
+
+.form-details input::placeholder{
+    position: absolute;
+    left: 30px;
+}
+
+.signup-btn{
+    margin-top: 10px;
+    padding: .6rem;
+    background-color: rgb(8, 130, 237);
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width:850px) {
+    .signup-form .image-container{
+        width: 50%;
+    }
+}
+
+@media (max-width:760px) {
+   
+    .content-wrapper{
+        width: 30%;
+    
+    }
+    .form-content{
+        width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+    .content-wrapper{
+        border: none;
+    }
+    .image-container{
+        display: none;
+    }
+   
+    .content-wrapper{
+        width: 80%;
+        
+    }
+    .form-content{
+        width: 100%;
+    }
+}
